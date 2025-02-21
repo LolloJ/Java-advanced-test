@@ -26,3 +26,5 @@ jobs:
       homework: walk
       mod: ${{ inputs.mod }}
       class: ${{ inputs.class }}
+    secrets:
+      token: ${{ secrets.READ_PAT }}
