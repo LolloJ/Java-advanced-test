@@ -2,21 +2,15 @@ name: Multi-Platform-Test
 
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       homework:
-        description: 'Homework'
         required: true
-        type: choice
-        options:
-            - walk
-            - arrayset 
+        type: string 
       mod:
-        description: 'Modification'
         required: true
         type: string
       class:
-        description: 'Class for test'
         required: true
         type: string
 
