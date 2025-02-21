@@ -21,7 +21,7 @@ on:
         type: string
 
 env:
-  GITHUB_HADLE: ${{ vars.HANDLE }}
+  GITHUB_HANDLE: ${{ vars.HANDLE }}
   LAST_NAME: ${{ vars.LAST_NAME }}
   REPOSITORY_NAME: ${{ vars.REPOSITORY_NAME }}
   TEST_REPOSITORY_NAME: ${{ vars.TEST_REPOSITORY_NAME }}
