@@ -1,0 +1,28 @@
+name: Walk-test
+
+on: 
+  workflow_dispatch:
+    inputs:
+      mod:
+        description: Modification
+        required: true
+        type: choice
+        options:
+          - Walk
+          - RecursiveWalk
+          - AdvancedWalk
+      class:
+        description: Class for tests
+        required: true
+        type: choice
+        options:
+          - Walk
+          - RecursiveWalk
+
+jobs:
+  Test-solution:
+    uses: ./.github/workflows/multi-platform_test.yml
+    with:
+      homework: walk
+      mod: ${{ inputs.mod }}
+      class: ${{ inputs.class }}
