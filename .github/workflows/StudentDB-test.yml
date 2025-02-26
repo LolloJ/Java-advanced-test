@@ -1,0 +1,29 @@
+name: StudentDB-test
+
+on: 
+  workflow_dispatch:
+    inputs:
+      mod:
+        description: Modification
+        required: true
+        type: choice
+        options:
+          - StudentQuery
+          - GroupQuery
+          - AdvancedQuery
+      class:
+        description: Class for tests
+        required: true
+        type: choice
+        options:
+          - StudentDB
+
+jobs:
+  Test-solution:
+    uses: ./.github/workflows/multi-platform_test.yml
+    with:
+      homework: walk
+      mod: ${{ inputs.mod }}
+      class: ${{ inputs.class }}
+    secrets:
+      token: ${{ secrets.READ_PAT }}
