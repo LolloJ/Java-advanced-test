@@ -22,7 +22,7 @@ jobs:
   Test-solution:
     uses: ./.github/workflows/multi-platform_test.yml
     with:
-      homework: walk
+      homework: student
       mod: ${{ inputs.mod }}
       class: ${{ inputs.class }}
     secrets:
