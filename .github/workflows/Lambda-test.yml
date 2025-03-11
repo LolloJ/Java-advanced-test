@@ -1,0 +1,29 @@
+name: Lambda-test
+
+on: 
+  workflow_dispatch:
+    inputs:
+      mod:
+        description: Modification
+        required: true
+        type: choice
+        options:
+          - Easy
+          - Hard
+          - Advanced
+      class:
+        description: Class for tests
+        required: true
+        type: choice
+        options:
+          - Lambda
+
+jobs:
+  Test-solution:
+    uses: ./.github/workflows/multi-platform_test.yml
+    with:
+      homework: lambda
+      mod: ${{ inputs.mod }}
+      class: ${{ inputs.class }}
+    secrets:
+      token: ${{ secrets.READ_PAT }}
