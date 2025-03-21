@@ -10,7 +10,7 @@ on:
         options:
           - interface
           - class
-          # - Advanced
+          - Advanced
       class:
         description: Class for tests
         required: true
