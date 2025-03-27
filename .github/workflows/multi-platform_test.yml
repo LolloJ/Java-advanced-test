@@ -102,7 +102,7 @@ jobs:
         shell: cmd
         
       - name: Run binary tests
-        run: java -cp %REPOSITORY_NAME%\java-solutions;%TEST_REPOSITORY_NAME%\modules\info.kgeorgiy.java.advanced.%HOMEWORK%;%TEST_REPOSITORY_NAME%\modules\info.kgeorgiy.java.advanced.%HOMEWORK%.tools -p %TEST_REPOSITORY_NAME%\artifacts;%TEST_REPOSITORY_NAME%\lib -m info.kgeorgiy.java.advanced.%HOMEWORK% %MOD% info.kgeorgiy.ja.%LAST_NAME%.%HOMEWORK%.%CLASS%
+        run: java -cp %REPOSITORY_NAME%\java-solutions;%TEST_REPOSITORY_NAME%\modules\info.kgeorgiy.java.advanced.%HOMEWORK%;%TEST_REPOSITORY_NAME%\modules\info.kgeorgiy.java.advanced.%HOMEWORK%.tools -p %TEST_REPOSITORY_NAME%\artifacts;%TEST_REPOSITORY_NAME%\lib -m info.kgeorgiy.java.advanced.%HOMEWORK%.tools %MOD% info.kgeorgiy.ja.%LAST_NAME%.%HOMEWORK%.%CLASS%
         shell: cmd
         
     
