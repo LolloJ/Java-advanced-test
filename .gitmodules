@@ -3,4 +3,4 @@
 	url = https://www.kgeorgiy.info/git/geo/java-advanced-2025.git
 [submodule "java-adv"]
 	path = java-adv
-	url = https://github.com/LolloJ/java-adv.git
+	url = git@github.com:LolloJ/java-adv.git
