@@ -1,0 +1,27 @@
+name: ArraySet-test
+
+on: 
+  workflow_dispatch:
+    inputs:
+      mod:
+        description: Modification
+        required: true
+        type: choice
+        options:
+          - new-server-i18n
+      class:
+        description: Class for tests
+        required: true
+        type: choice
+        options:
+          - HelloUDPServer
+
+jobs:
+  Test-solution:
+    uses: ./.github/workflows/multi-platform_test.yml
+    with:
+      homework: hello
+      mod: ${{ inputs.mod }}
+      class: ${{ inputs.class }}
+    secrets:
+      token: ${{ secrets.READ_PAT }}
